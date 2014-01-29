@@ -61,28 +61,21 @@ public class WindowBuilderTest extends JFrame {
 		comboBoxEquipmentList.addItem("Pin Tool");
 		//final String equipment = (String)comboBoxEquipmentList.getSelectedItem();
 		contentPane.add(comboBoxEquipmentList);
-		
-		
-		JButton btnSave = new JButton("Save");
-		btnSave.setToolTipText("Click to save entry to log.");
-		
-		btnSave.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent arg0) {	
-				//String equipment = (String) comboBoxEquipmentList.getSelectedItem();
-				//textFieldOutput.setText(equipment);
-				/*how to save to Excel sheet when I click the save button?*/
-			}
-		});		
-		btnSave.setBounds(103, 271, 117, 29);
-		contentPane.add(btnSave);
+				
 				
 		JTextArea textAreaDescription = new JTextArea();
 		textAreaDescription.setLineWrap(true);
 		textAreaDescription.setText("test");
 		textAreaDescription.setBounds(55, 194, 206, 71);
 		contentPane.add(textAreaDescription);
+
+		JButton btnSave = new JButton("Save");
+		btnSave.setToolTipText("Click to save entry to log.");
 		
+		btnSave.addActionListener( new SaveListener( textAreaDescription ));
+		btnSave.setBounds(103, 271, 117, 29);
+		contentPane.add(btnSave);
+
 		textFieldAddDescription = new JTextField();
 		textFieldAddDescription.setText("Add notes below:");
 		textFieldAddDescription.setEditable(false);
