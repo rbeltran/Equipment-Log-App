@@ -58,7 +58,7 @@ public class WindowBuilderTest extends JFrame {
 		comboBoxEquipmentList.setBounds(55, 22, 226, 27);
 		comboBoxEquipmentList.addItem("Choose equipment");
 		comboBoxEquipmentList.addItem("Dispenser");
-		comboBoxEquipmentList.addItem("Pin Tool");
+		comboBoxEquipmentList.addItem("Pin Tool");	
 		//final String equipment = (String)comboBoxEquipmentList.getSelectedItem();
 		contentPane.add(comboBoxEquipmentList);
 		
